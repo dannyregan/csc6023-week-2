@@ -1,0 +1,21 @@
+def hanoi(n):
+    if n == 1:
+        return 1
+    else:
+        return 2 * hanoi(n-1) + 1
+
+def main(t):
+    while t:
+        try:
+            res = int(input("Choose a number of disks for the towers of Hanoi problem: "))
+            if 0 < res < float("inf"):
+                print(hanoi(res))
+            else:
+                print("Goodbye!")
+                t = False
+        except:
+            print("Please enter a valid number")
+
+# =================================================================
+
+main(True)
